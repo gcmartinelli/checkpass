@@ -1,6 +1,6 @@
 # checkpass
 
-Checks pwnedpasswords.com for pwned passwords...
+Checks pwnedpasswords.com (https://haveibeenpwned.com/Passwords) for pwned passwords...
 
 #### Usage
 

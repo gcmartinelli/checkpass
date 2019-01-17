@@ -84,37 +84,5 @@ def main():
 			if verbosity:
 				print('> Password {} is safu'.format(source))
 
-	# # If arguments are passed in command line
-	# if len(sys.argv) > 1:
-	# 	# If 'file' flag is present
-	# 	if if '-f' in sys.argv:
-	# 		if len(sys.argv) != 3:
-	# 			print('A single filename needs to be passed if using the file (-f) flag')
-	# 		else:
-	# 			with open(sys.argv[2], newline='') as file:
-	# 				for row in file.readlines():
-	# 					passw = row.strip()
-	# 					check = check_pass(passw)
-	# 					if check:
-	# 						print('>>> PASSWORD MATCH! <<<')
-	# 						print('Password: ', passw)
-	# 						print('SHA1 Hash: ', check[0])
-	# 						print('Number of matches: ', check[1])
-	# 						print('-' * 20)
-	# 					else:
-	# 						print('> Password {} is safu'.format(passw))
-	# # Fallback if no files are passed in cmd line
-	# else:
-	# 	passw = input('Enter password to check...\n')
-	# 	check = check_pass(passw)
-	# 	if check:
-	# 		print('>>> PASSWORD MATCH! <<<')
-	# 		print('Password: ', passw)
-	# 		print('SHA1 Hash: ', check[0])
-	# 		print('Number of matches: ', check[1])
-	# 		print('-' * 20)
-	# 	else:
-	# 		print('> Password {} is safu'.format(passw))
-
 if __name__ == '__main__':
 	main()
