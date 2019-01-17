@@ -8,6 +8,7 @@ http://github.com/gcmartinelli/checkpass
 
 Jan-2019
 '''
+import sys
 import requests
 import hashlib
 import argparse
@@ -22,7 +23,12 @@ def check_pass(passw):
 	hashed = h(passw).upper()
 	#check API
 	url = 'https://api.pwnedpasswords.com/range/'
-	r = requests.get(url + hashed[:5])
+	try:
+		r = requests.get(url + hashed[:5])
+	except Exception as e:
+		print('Error contacting pwnedpasswords.com')
+		print(e)
+		sys.exit()
 	n = r.text.find(hashed[5:]) #checks if hash is in the list
 
 	if n != -1:
