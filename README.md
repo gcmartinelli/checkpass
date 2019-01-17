@@ -2,7 +2,11 @@
 
 Checks pwnedpasswords.com (https://haveibeenpwned.com/Passwords) for pwned passwords...
 
-#### Usage
+## Dependencies
+
+[Requests] (http://docs.python-requests.org/en/master/)
+
+## Usage
 
 Checks pwnedpasswords.com for pwned passwords
 
