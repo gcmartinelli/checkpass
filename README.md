@@ -4,7 +4,7 @@ Checks pwnedpasswords.com (https://haveibeenpwned.com/Passwords) for pwned passw
 
 ## Dependencies
 
-[Requests] (http://docs.python-requests.org/en/master/)
+(Requests)[http://docs.python-requests.org/en/master/]
 
 ## Usage
 
