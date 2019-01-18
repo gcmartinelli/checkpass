@@ -36,7 +36,7 @@ optional arguments:
 
 Pass a .txt file with one password per line to check password in bulk.
 
-### Silent mode
+### Silent mode ([-s])
 
 `python check_passwd.py -s example.txt`
 
