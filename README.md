@@ -22,14 +22,13 @@ optional arguments:
 
   -f, --filename   use an optional .txt sourcefile. One password per line
 
-  -v, --verbosity  increase verbosity
+  -s, --silence  decreases verbosity
 
 
 ### Default mode 
 
 `python check_passwd.py PASSWORD`
 
-*By default script will only return passwords that have been pwned*
 
 ### File mode ([-f FILENAME])
 
@@ -37,9 +36,9 @@ optional arguments:
 
 Pass a .txt file with one password per line to check password in bulk.
 
-### Verbose mode
+### Silent mode
 
-`python check_passwd.py -v example.txt`
+`python check_passwd.py -s example.txt`
 
-If the flag -v is used, the script will give more details, in terminal, about each password passed. 
+If the flag -s is used, the script will only print out pwned passwords.
 

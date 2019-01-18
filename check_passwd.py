@@ -47,14 +47,14 @@ def main():
 	parser.add_argument("source", help="filename or password to check")
 	parser.add_argument("-f", "--filename", help="use an optional .txt sourcefile. One password per line", 
 						action="store_true")
-	parser.add_argument("-v", "--verbosity", help="increase verbosity", 
+	parser.add_argument("-s", "--silent", help="decreases verbosity", 
 						action="store_true")
 	args = parser.parse_args()
 
-	if args.verbosity:
-		verbosity = True
+	if args.silent:
+		silent = True
 	else:
-		verbosity = False
+		silent = False
 	
 	source = args.source
 
@@ -64,8 +64,8 @@ def main():
 				passw = row.strip()
 				check = check_pass(passw)
 				if check:
-					if verbosity:
-						print('>>> PASSWORD MATCH! <<<')
+					if not silent:
+						print('>>> PASSWORD PWNED! <<<')
 						print('Password: ', passw)
 						print('SHA1 Hash: ', check[0])
 						print('Number of matches: ', check[1])
@@ -73,13 +73,13 @@ def main():
 					else:
 						print(passw)
 				else:
-					if verbosity:
+					if not silent:
 						print('> Password {} is safu'.format(passw))
 	else:
 		check = check_pass(source)
 		if check:
-			if verbosity:
-				print('>>> PASSWORD MATCH! <<<')
+			if not silent:
+				print('>>> PASSWORD PWNED! <<<')
 				print('Password: ', source)
 				print('SHA1 Hash: ', check[0])
 				print('Number of matches: ', check[1])
@@ -87,7 +87,7 @@ def main():
 			else:
 				print(source)
 		else:
-			if verbosity:
+			if not silent:
 				print('> Password {} is safu'.format(source))
 
 if __name__ == '__main__':
